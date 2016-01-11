@@ -7,14 +7,15 @@
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat">
-        <activity
-                android:name=".crime.CrimeActivity"
-                android:label="@string/app_name">
+        <activity android:name=".controller.crimeList.CrimeListActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+                android:name=".controller.crime.CrimeActivity"
+                android:label="@string/app_name">
         </activity>
     </application>
 
