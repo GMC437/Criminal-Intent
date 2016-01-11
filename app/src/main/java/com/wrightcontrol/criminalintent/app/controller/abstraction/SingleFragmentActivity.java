@@ -1,4 +1,4 @@
-package com.wrightcontrol.criminalintent.app.abstraction;
+package com.wrightcontrol.criminalintent.app.controller.abstraction;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

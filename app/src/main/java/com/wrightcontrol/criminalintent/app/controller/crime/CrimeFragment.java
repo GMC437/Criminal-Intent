@@ -1,4 +1,4 @@
-package com.wrightcontrol.criminalintent.app.crime;
+package com.wrightcontrol.criminalintent.app.controller.crime;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

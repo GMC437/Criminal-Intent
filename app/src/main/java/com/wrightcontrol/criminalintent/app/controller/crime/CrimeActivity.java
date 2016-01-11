@@ -1,8 +1,8 @@
-package com.wrightcontrol.criminalintent.app.crime;
+package com.wrightcontrol.criminalintent.app.controller.crime;
 
 import android.support.v4.app.Fragment;
 import com.wrightcontrol.criminalintent.app.R;
-import com.wrightcontrol.criminalintent.app.abstraction.SingleFragmentActivity;
+import com.wrightcontrol.criminalintent.app.controller.abstraction.SingleFragmentActivity;
 
 public class CrimeActivity extends SingleFragmentActivity {
 
