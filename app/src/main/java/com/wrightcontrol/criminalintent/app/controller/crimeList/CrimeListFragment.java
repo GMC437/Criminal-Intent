@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import com.wrightcontrol.criminalintent.app.R;
-import com.wrightcontrol.criminalintent.app.controller.crime.CrimeActivity;
+import com.wrightcontrol.criminalintent.app.controller.crimePager.CrimePagerActivity;
 import com.wrightcontrol.criminalintent.app.model.Crime;
 import com.wrightcontrol.criminalintent.app.model.CrimeLab;
 
@@ -25,7 +25,6 @@ public class CrimeListFragment extends Fragment {
     // widgets vars
     private RecyclerView mCrimeRecyclerView;
     private CrimeAdapter mAdapter;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -52,16 +51,16 @@ public class CrimeListFragment extends Fragment {
         CrimeLab crimeLab = CrimeLab.get(getActivity());
         List<Crime> crimes = crimeLab.getCrimes();
 
-        if(mAdapter == null){
+        if (mAdapter == null) {
             mAdapter = new CrimeAdapter(crimes);
             mCrimeRecyclerView.setAdapter(mAdapter);
-        }else{
+        } else {
             mAdapter.notifyDataSetChanged();
         }
     }
 
     // Adapter for the Recycler view
-    private class CrimeAdapter extends RecyclerView.Adapter<CrimeHolder>  {
+    private class CrimeAdapter extends RecyclerView.Adapter<CrimeHolder> {
         private List<Crime> mCrimes;
 
         public CrimeAdapter(List<Crime> crimes) {
@@ -91,7 +90,7 @@ public class CrimeListFragment extends Fragment {
     }
 
     private class CrimeHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-       // Widgets vars
+        // Widgets vars
         private TextView mTitleTextView;
         private TextView mDateTextView;
         private CheckBox mSolvedCheckBox;
@@ -110,7 +109,7 @@ public class CrimeListFragment extends Fragment {
         }
 
         // Binds what the widget will display when using the app.
-        public void bindCrime(Crime crime){
+        public void bindCrime(Crime crime) {
             mCrime = crime;
             mTitleTextView.setText(mCrime.getTitle());
             mDateTextView.setText(mCrime.getDate().toString());
@@ -120,7 +119,7 @@ public class CrimeListFragment extends Fragment {
         // Shows a toast message when a row is clicked.
         @Override
         public void onClick(View v) {
-            Intent intent = CrimeActivity.newIntent(getActivity(), mCrime.getId());
+            Intent intent = CrimePagerActivity.newIntent(getActivity(), mCrime.getId());
             startActivity(intent);
         }
     }
