@@ -5,12 +5,22 @@ import android.widget.Toast;
 
 public class ToastAlert {
 
-    public static void showLongToast(Context context, int messageID) {
+    public static void sShowLongToast(Context context, String messageID) {
         Toast toast = Toast.makeText(context, messageID, Toast.LENGTH_LONG);
         toast.show();
     }
 
-    public static void showShortToast(Context context, String messageID) {
+    public static void sShowShortToast(Context context, String messageID) {
+        Toast toast = Toast.makeText(context, messageID, Toast.LENGTH_SHORT);
+        toast.show();
+    }
+
+    public static void iShowLongToast(Context context, int messageID) {
+        Toast toast = Toast.makeText(context, messageID, Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    public static void iShowShortToast(Context context, int messageID) {
         Toast toast = Toast.makeText(context, messageID, Toast.LENGTH_SHORT);
         toast.show();
     }
