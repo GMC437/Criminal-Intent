@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/tools"
+        >
+
+    <item
+            android:id="@+id/menu_settings"
+            android:title="@string/settings"
+            android:orderInCategory="100"
+            app:showAsAction="ifRoom">
+
+
+            <item
+                    android:title="@string/new_crime"
+                    android:id="@+id/menu_item_new_crime"
+                    android:icon="@drawable/ic_menu_add"
+                    app:showAsAction="ifRoom"/>
+
+            <item
+                    android:id="@+id/menu_item_show_subtitle"
+                    android:title="@string/show_subtitle"
+                    app:showAsAction="ifRoom"/>
+
+
+    </item>
+
+</menu>
