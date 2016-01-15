@@ -10,4 +10,12 @@
 
     <!-- Strings for Date Picker -->
     <string name="date_picker_title">Date of crime:</string>
+
+    <!-- Strings for Menus -->
+    <string name="settings">settings</string>
+    <string name="new_crime">New Crime</string>
+    <string name="show_subtitle">Show Subtitle</string>
+    <string name="hide_subtitle">Hide Subtitle</string>
+    <string name="subtitle_format">%1$s crimes</string>
+
 </resources>
