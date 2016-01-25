@@ -1,106 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+             style="@style/scrollWrapper"
+        android:background="@color/ecstasy_orange">
 
     <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
         <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:layout_margin="@dimen/two_dp">
+                android:orientation="horizontal">
 
-            <ImageView
-                    android:layout_width="@dimen/eighty_dp"
-                    android:layout_height="@dimen/eighty_dp"
-                    android:id="@+id/crime_photo"
-                    android:scaleType="centerInside"
-                    android:background="@android:color/darker_gray"
-                    android:cropToPadding="true"/>
-
-            <ImageButton
-                    android:layout_width="@dimen/twenty_dp"
-                    android:layout_height="@dimen/twenty_dp"
-                    android:id="@+id/crime_camera"/>
-        </LinearLayout>
-
-        <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_margin="@dimen/two_dp"
-                android:layout_weight="9">
-
-            <TextView
-                    android:layout_width="match_parent"
+            <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/crime_title_label"
-                    style="?android:listSeparatorTextViewStyle"/>
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/two_dp">
 
-            <EditText
-                    android:layout_width="match_parent"
+                <ImageView
+                        android:layout_width="@dimen/eighty_dp"
+                        android:layout_height="@dimen/eighty_dp"
+                        android:id="@+id/crime_photo"
+                        android:scaleType="centerInside"
+                        android:background="@color/silver_grey"
+                        android:layout_gravity="center"
+                        android:cropToPadding="true"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/crime_camera"
+                        android:background="@color/ripe_lemon_yellow"
+                        android:layout_gravity="center"
+                        android:text="@string/crime_image_button"
+                        android:layout_margin="@dimen/two_dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/crime_title_edit_text"
+                    android:orientation="vertical"
                     android:layout_margin="@dimen/two_dp"
-                    android:hint="@string/crime_title_hint"/>
+                    android:layout_weight="4">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crime_title_label"
+                        style="?android:listSeparatorTextViewStyle"/>
+
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/crime_title_edit_text"
+                        android:layout_margin="@dimen/two_dp"
+                        android:hint="@string/crime_title_hint"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/crime_detail_text_view"
+                android:text="@string/crime_detail_label"
+                style="?android:listSeparatorTextViewStyle"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:id="@+id/crime_date_button"
+                    android:background="@color/ripe_lemon_yellow"
+                    android:layout_margin="@dimen/five_dp"/>
+
+            <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:id="@+id/crime_solve_check_box"
+                    android:layout_margin="@dimen/five_dp"
+                    android:text="@string/crime_solved_label"/>
 
         </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/five_dp">
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/crime_suspect_button"
+                    android:background="@color/ripe_lemon_yellow"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/two_dp"
+                    android:text="@string/crime_suspect_text"/>
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/crime_report_button"
+                    android:background="@color/ripe_lemon_yellow"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/two_dp"
+                    android:text="@string/crime_report_text"/>
+        </LinearLayout>
+
+
     </LinearLayout>
 
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/crime_detail_text_view"
-            android:text="@string/crime_detail_label"
-            style="?android:listSeparatorTextViewStyle"/>
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="50"
-                android:id="@+id/crime_date_button"
-                android:layout_margin="@dimen/five_dp"/>
-
-        <CheckBox
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="50"
-                android:id="@+id/crime_solve_check_box"
-                android:layout_margin="@dimen/five_dp"
-                android:text="@string/crime_solved_label"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="@dimen/five_dp">
-
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/crime_suspect_button"
-                android:layout_weight="50"
-                android:text="@string/crime_suspect_text"/>
-
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/crime_report_button"
-                android:layout_weight="50"
-                android:text="@string/crime_report_text"/>
-    </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

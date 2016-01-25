@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="burnt_orange">#D35400</color>
-    <color name="gossip_green">#87D37C</color>
-    <color name="light_wisteria_purple">#BE90D4</color>
+    <color name="sour_lemon_yellow">#FFE270</color>
+    <color name="ripe_lemon_yellow">#F7CA18</color>
+    <color name="ecstasy_orange">#F9690E</color>
+    <color name="thunderbird_red">#D91E18</color>
+    <color name="black">#000000</color>
+    <color name="silver_grey">#BFBFBF</color>
     <color name="gallery_white">#EEEEEE</color>
 </resources>

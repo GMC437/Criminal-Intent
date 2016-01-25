@@ -1,8 +1,40 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="Yellow" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Override the app bar color -->
+        <item name="android:actionBarStyle">@style/Yellow.ActionBar</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <!-- this colours th very top where batter and signal are !-->
+        <item name="colorAccent">@color/sour_lemon_yellow</item>
+        <!-- this colours the accents of existing text or spinners !-->
+
+        <!-- Support Library Compatibility -->
+        <item name="actionBarStyle">@style/Yellow.ActionBar</item>
+
+    </style>
+
+
+    <!-- Style for Action Bar -->
+    <style name="Yellow.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/actionbar_background</item>
+        <item name="android:titleTextStyle">@style/Yellow.ActionBar.Text</item>
+
+        <!-- Support Library Compatibility -->
+        <item name="background">@drawable/actionbar_background</item>
+    </style>
+
+    <!-- Style for Action Bar Text -->
+    <style name="Yellow.ActionBar.Text" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/gallery_white</item>
+    </style>
+
+    <!-- Style for Scrollbar Wrappers -->
+    <style name="scrollWrapper">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fillViewport">true</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
     </style>
 
 </resources>
