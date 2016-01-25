@@ -48,7 +48,7 @@ public class CrimeFragment extends Fragment {
     private CheckBox mSolvedCheckBox;
     private Button mReportButton;
     private Button mSuspectButton;
-    private ImageButton mPhotoButton;
+    private Button mPhotoButton;
     private ImageView mPhotoView;
     private Callbacks mCallbacks;
 
@@ -255,7 +255,7 @@ public class CrimeFragment extends Fragment {
             mSuspectButton.setEnabled(false);
         }
 
-        mPhotoButton = (ImageButton)view.findViewById(R.id.crime_camera);
+        mPhotoButton = (Button)view.findViewById(R.id.crime_camera);
         final Intent captureImage = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
         boolean canTakePhoto = mPhotoFile != null && captureImage.resolveActivity(packageManager) != null;
