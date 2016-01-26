@@ -33,30 +33,35 @@ public class CrimeListFragment extends Fragment {
         void onCrimeSelected(Crime crime);
     }
 
+    //Assigning the context to mCallbacks
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         mCallbacks = (Callbacks) context;
     }
 
+    //Creating the options menu
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
     }
 
+    //Persists the total crimes through rotation
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putBoolean(SAVED_SUBTITLE_VISIBLE, mSubtitleVisible);
     }
 
+    //Sets mCallbacks to null
     @Override
     public void onDetach() {
         super.onDetach();
         mCallbacks = null;
     }
 
+    //Creates view and checks if the crime total is visible
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_crime_list, container, false);
@@ -76,6 +81,7 @@ public class CrimeListFragment extends Fragment {
         updateUI();
     }
 
+    //Inflates the options menu and checks crime total boolean value
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
@@ -89,15 +95,18 @@ public class CrimeListFragment extends Fragment {
         }
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+           //Brings user to a new Crime Fragment
             case R.id.menu_item_new_crime:
                 Crime crime = new Crime();
                 CrimeLab.get(getActivity()).addCrime(crime);
                 updateUI();
                 mCallbacks.onCrimeSelected(crime);
                 return true;
+            //Shows total crimes in action bar
             case R.id.menu_item_show_subtitle:
                 mSubtitleVisible = !mSubtitleVisible;
                 getActivity().invalidateOptionsMenu();
@@ -108,6 +117,7 @@ public class CrimeListFragment extends Fragment {
                 return super.onOptionsItemSelected(item);
         }
     }
+
 
     private void updateSubtitle() {
         CrimeLab crimeLab = CrimeLab.get(getActivity());
@@ -202,10 +212,10 @@ public class CrimeListFragment extends Fragment {
             mCrime = crime;
             mTitleTextView.setText(mCrime.getTitle());
             mDateTextView.setText(mCrime.getDate().toString());
-            //mSolvedCheckBox.setChecked(mCrime.getSolved());
+            mSolvedCheckBox.setChecked(mCrime.getSolved());
         }
 
-        // Shows a toast message when a row is clicked.
+        //Brings user to the selected Crime Fragment
         @Override
         public void onClick(View v) {
             mCallbacks.onCrimeSelected(mCrime);

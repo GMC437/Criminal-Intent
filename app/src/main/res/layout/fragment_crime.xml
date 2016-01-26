@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             style="@style/scrollWrapper"
-            android:background="@color/ecstasy_orange">
+            android:background="@color/royal_blue">
 
     <LinearLayout
             android:orientation="vertical"

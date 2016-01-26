@@ -7,7 +7,9 @@
         <item name="colorPrimaryDark">@color/black</item>
         <!-- this colours th very top where batter and signal are !-->
         <item name="colorAccent">@color/sour_lemon_yellow</item>
-        <!-- this colours the accents of existing text or spinners !-->
+        <!-- Changes all text to white -->
+        <item name="android:textColor">@color/gallery_white</item>
+        <!--  -->
 
         <!-- Support Library Compatibility -->
         <item name="actionBarStyle">@style/Yellow.ActionBar</item>

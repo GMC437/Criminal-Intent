@@ -27,6 +27,7 @@ public class CrimeListActivity extends SingleFragmentActivity implements CrimeLi
         return new CrimeListFragment();
     }
 
+    // Callback
     @Override
     public void onCrimeSelected(Crime crime) {
         if (findViewById(R.id.detail_fragment_container) == null) {
@@ -41,6 +42,7 @@ public class CrimeListActivity extends SingleFragmentActivity implements CrimeLi
         }
     }
 
+    // Callback
     @Override
     public void onCrimeUpdated(Crime crime) {
         CrimeListFragment listFragment = (CrimeListFragment) getSupportFragmentManager()
